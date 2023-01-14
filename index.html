@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket</title>
+</head>
+
+<body>
+    <h1>WS A Node.js WebSocket library</h1>
+    <p>
+        WS is a WebSockets server for Node.js. It's quite low level: you listen to incoming connection requests and
+        respond to raw messages as either strings or byte buffers. Since WebSockets are natively supported in all modern
+        browsers, it is possible to work with WS on the server and the browser's WebSocket API on the client.
+
+        In order to demonstrate how to set up WebSockets with Node and WS, we have built a demo app which shares users'
+        cursor positions in realtime. We walk through building it below.
+
+        Building an interactive cursor position-sharing demo with WS
+        This is a demo to create a colored cursor icon for every connected user. When they move their mouse around,
+        their cursor icon moves on the screen and is also shown as moving on the screen of every connected user. This
+        happens in realtime, as the mouse is being moved.</p>
+
+
+    <script>
+        const ws = new WebSocket("ws://localhost:8080")
+        ws.addEventListener('open', () => {
+            console.log(" We are connected to webservers");
+        })
+    </script>
+
+</body>
+
+</html>
