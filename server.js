@@ -10,7 +10,7 @@ wss.on('connection', (ws)=>{
     console.log("Hello, you are connected");
     ws.on('message', (data)=>{
         const reason = data.toString();
-
+        ws.send(data)
         console.log("Hello, there is new message",reason);
     })
 
