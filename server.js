@@ -9,7 +9,9 @@ const wss= new WebSocket.Server({port:8080})
 wss.on('connection', (ws)=>{
     console.log("Hello, you are connected");
     ws.on('message', (data)=>{
-        console.log("Hello, there is new message");
+        const reason = data.toString();
+
+        console.log("Hello, there is new message",reason);
     })
 
     ws.on('close', ()=>{

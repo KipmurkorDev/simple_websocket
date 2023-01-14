@@ -28,6 +28,8 @@
         const ws = new WebSocket("ws://localhost:8080")
         ws.addEventListener('open', () => {
             console.log(" We are connected to webservers");
+        ws.send("Hey, where are you going")
+
         })
     </script>
 
